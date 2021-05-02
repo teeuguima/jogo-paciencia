@@ -23,13 +23,14 @@ public class PacienciaFacade {
     private MonteHome monte;
     
     
-    public void iniciarJogo(){
+    public String iniciarJogo(){
         baralho = new Baralho();
         for (int i=0; i <= 3; i++){
             pilhas[i] = new PilhaHome("Pilha "+i);
         }
         
         this.iniciarMonte();
+        return "Jogo inicializado!";
     }
    
     
@@ -86,6 +87,12 @@ public class PacienciaFacade {
     
     public Baralho getBaralho() {
         return this.baralho;
+    }
+    
+    public void percorrerTableus(){
+        for(int i = 0; i < 12; i++){
+            
+        }
     }
     
     /**
